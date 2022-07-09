@@ -1,8 +1,8 @@
 import 'package:assignment/edit.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,9 @@ class Profile extends StatelessWidget {
                     )),
                 SizedBox(width: 10),
                 GestureDetector(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Edit()));
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Edit()));
                   },
                   child: Icon(
                     Icons.edit,
@@ -50,14 +51,12 @@ class Profile extends StatelessWidget {
               ],
             ),
             SizedBox(height: 50),
-
             Text('Menu',
-              style: TextStyle(
+                style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 14,
-              color: Colors.grey,
-              )
-            ),
+                  color: Colors.grey,
+                )),
             SizedBox(height: 25),
             Row(
               children: [
@@ -66,13 +65,13 @@ class Profile extends StatelessWidget {
                   radius: 18,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.calendar_today_rounded,
-                      color: Colors.white,
-                      size: 25,
-                    ),
-                  ],
+                    children: [
+                      Icon(
+                        Icons.calendar_today_rounded,
+                        color: Colors.white,
+                        size: 25,
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -86,13 +85,9 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   width: 170,
                 ),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.grey,
-                  size: 15
-                )
+                Icon(Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey, size: 15)
               ],
-
             ),
             SizedBox(height: 25),
             Row(
@@ -102,13 +97,13 @@ class Profile extends StatelessWidget {
                   radius: 18,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.verified_user_rounded,
-                      color: Colors.white,
-                      size: 25,
-                    ),
-                  ],
+                    children: [
+                      Icon(
+                        Icons.verified_user_rounded,
+                        color: Colors.white,
+                        size: 25,
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -122,13 +117,9 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   width: 170,
                 ),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.grey,
-                  size: 15
-                )
+                Icon(Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey, size: 15)
               ],
-
             ),
             SizedBox(height: 25),
             Row(
@@ -158,13 +149,9 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   width: 170,
                 ),
-                Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.grey,
-                    size: 15
-                )
+                Icon(Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey, size: 15)
               ],
-
             ),
             SizedBox(height: 25),
             Row(
@@ -194,13 +181,9 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   width: 170,
                 ),
-                Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.grey,
-                    size: 15
-                )
+                Icon(Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey, size: 15)
               ],
-
             ),
             SizedBox(height: 25),
             Row(
@@ -230,13 +213,9 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   width: 170,
                 ),
-                Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.grey,
-                    size: 15
-                )
+                Icon(Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey, size: 15)
               ],
-
             )
           ],
         ),
