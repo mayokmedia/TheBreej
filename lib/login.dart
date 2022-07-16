@@ -1,5 +1,8 @@
+import 'package:assignment/const/const.dart';
+import 'package:assignment/const/styles.dart';
 import 'package:assignment/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:assignment/widgets/custom_container.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -8,117 +11,54 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.black),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 200,
-            ),
-            Row(
-              children: const [
-                Text(
-                  'Login',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    fontFamily: 'Roboto',
-                    color: Colors.black,
-                  ),
-                ),
-                SizedBox(
-                  width: 70,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: const [
-                Text(
-                  'E-mail',
-                  style: TextStyle(
-                    color: Colors.black26,
-                    fontSize: 16,
-                    fontFamily: 'Roboto',
-                  ),
-                ),
-                SizedBox(
-                  width: 70,
-                ),
-              ],
-            ),
-            Container(
-                height: 65,
-                width: 325,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 2, color: Colors.grey),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Text(
-                      'Your e-mail or phone',
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                )),
-            const SizedBox(
-              height: 35,
-            ),
-            Row(
-              children: const [
-                Text(
-                  'Pasword',
-                  style: TextStyle(
-                    color: Colors.black26,
-                    fontSize: 16,
-                    fontFamily: 'Roboto',
-                  ),
-                ),
-                SizedBox(
-                  width: 70,
-                ),
-              ],
-            ),
-            Container(
-              height: 65,
-              width: 325,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(width: 2, color: Colors.grey),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  Text(
-                    'Password',
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                  Icon(
-                    Icons.remove_red_eye_outlined,
-                    color: Colors.grey,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 35),
             const Text(
-              'Forgot Password?',
+              'Login',
               style: TextStyle(
-                color: Colors.red,
+                fontWeight: FontWeight.bold,
+                fontSize: 26,
+                fontFamily: 'Roboto',
+                color: Colors.black,
               ),
             ),
-            const SizedBox(
-              height: 35,
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: TextField(
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                decoration: kInputDecoration,
+              ),
+            ),
+            TextField(
+              obscureText: true,
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              decoration: kInputDecoration.copyWith(
+                prefixIcon: const Icon(Icons.lock,),
+                suffixIcon: const Icon(Icons.remove_red_eye,),
+                labelText: "Password:",
+                hintText: "Enter password",
+
+              ),
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -129,16 +69,16 @@ class LoginPage extends StatelessWidget {
               },
               child: Container(
                 height: 60,
-                width: 248,
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
                     color: const Color(0xFFFFA451),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.grey,
-                        blurRadius: 12.0,
-                        offset: Offset(5.5, 5),
-                      )
+                        blurRadius: 6.0,
+                      ),
                     ]),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -152,9 +92,6 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 35,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:assignment/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:assignment/const/styles.dart';
 
@@ -85,42 +86,8 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    height: 60,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset(
-                          'asset/icon/facebook icon.png',
-                          height: 35,
-                        ),
-                        const Text('FACEBOOK'),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset(
-                          'asset/icon/google icon.png',
-                          height: 35,
-                        ),
-                        const Text('GOOGLE'),
-                      ],
-                    ),
-                  ),
+                  customContainer("asset/icon/facebook icon.png", "FACEBOOK"),
+                  customContainer("asset/icon/google icon.png", "GOOGLE")
                 ],
               ),
               const SizedBox(
@@ -174,4 +141,5 @@ class HomePage extends StatelessWidget {
           ),
         ));
   }
+
 }
