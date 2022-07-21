@@ -42,8 +42,7 @@ class ProfilePage extends StatelessWidget {
                 const Spacer(),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const Edit()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Edit()));
                   },
                   child: const Icon(
                     Icons.edit,
@@ -56,7 +55,7 @@ class ProfilePage extends StatelessWidget {
             const Text('Menu',
                 style: TextStyle(
                   fontFamily: 'Roboto',
-                  fontSize: 14,
+                  fontSize: 14,  
                   color: Colors.grey,
                 )),
             CustomProfileRow(Icons.share, "Referrals"),

@@ -1,6 +1,7 @@
 import 'package:assignment/const/const.dart';
 import 'package:assignment/const/styles.dart';
 import 'package:assignment/profile.dart';
+import 'package:assignment/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:assignment/widgets/custom_container.dart';
 
@@ -62,10 +63,7 @@ class LoginPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ProfilePage()));
+                Navigator.push( context, MaterialPageRoute( builder: (context) => const ProfilePage()));
               },
               child: Container(
                 height: 60,
@@ -95,17 +93,23 @@ class LoginPage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Text(
                   'Dont have an account?',
                   style: TextStyle(
                     color: Colors.grey,
                   ),
                 ),
-                Text(
-                  'Sign up?',
-                  style: TextStyle(
-                    color: Colors.red,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Signup()));
+                  },
+                  child: Text(
+                    'Sign up?',
+                    style: TextStyle(
+                      color: Colors.red,
+
+                    ),
                   ),
                 ),
               ],
