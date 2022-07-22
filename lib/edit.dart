@@ -30,21 +30,22 @@ class Edit extends StatelessWidget {
             const Text('Adeyemo Kehinde',
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              fontFamily: 'Roboto',
+                fontFamily: 'Raleway',
               fontSize: 20
             ),),
             const Text('Edit Profile',
             style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
+              fontFamily: 'Raleway',
             ),),
           const Padding(
             padding: EdgeInsets.symmetric(vertical:20),
             child: TextField(
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey,fontFamily: 'Raleway'),
               decoration: InputDecoration(
                 labelText: 'Full Name',
-                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16),
+                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16,fontFamily: 'Raleway'),
                 hintText: 'ADEYEMO KEHINDE',
               ),
             ),
@@ -52,10 +53,10 @@ class Edit extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
             child:  TextField(
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey,fontFamily: 'Raleway'),
               decoration: InputDecoration(
                 labelText: 'E-mail',
-                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16),
+                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16,fontFamily: 'Raleway',),
                 hintText: 'adeyemi0989@gmail.com',
                 suffixIcon: Icon(Icons.mail, color: Colors.grey),
               ),
@@ -64,10 +65,10 @@ class Edit extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
             child:  TextField(
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey,fontFamily: 'Raleway'),
               decoration: InputDecoration(
                 labelText: 'Phone number',
-                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16),
+                labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 16,fontFamily: 'Raleway',),
                 hintText: '08149038163',
                 suffixIcon: Icon(Icons.phone_enabled, color: Colors.grey),
               ),
@@ -87,6 +88,7 @@ class Edit extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
+                      fontFamily: 'Raleway',
                     ),),
                 ],
               )

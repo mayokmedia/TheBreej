@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
-                fontFamily: 'Roboto',
+                fontFamily: 'Raleway',
                 color: Colors.black,
               ),
             ),
@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
             ),
             TextField(
               obscureText: true,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
               decoration: kInputDecoration.copyWith(
                 prefixIcon: const Icon(Icons.lock,),
                 suffixIcon: const Icon(Icons.remove_red_eye,),
@@ -53,11 +53,7 @@ class LoginPage extends StatelessWidget {
               alignment: Alignment.center,
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 20),
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
+                child: Text('Forgot Password?', style: TextStyle( color: Colors.red, fontFamily: 'Raleway'),
                 ),
               ),
             ),
@@ -81,11 +77,7 @@ class LoginPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                    Text('LOGIN', style: TextStyle( color: Colors.white,fontFamily: 'Raleway'),
                     ),
                   ],
                 ),
@@ -94,22 +86,13 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
-                Text(
-                  'Dont have an account?',
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
+                const Text('Dont have an account?', style: TextStyle( color: Colors.grey,fontFamily: 'Raleway'),
                 ),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=> Signup()));
                   },
-                  child: Text(
-                    'Sign up?',
-                    style: TextStyle(
-                      color: Colors.red,
-
-                    ),
+                  child: Text( 'Sign up?', style: const TextStyle( color: Colors.red,fontFamily: 'Raleway'),
                   ),
                 ),
               ],

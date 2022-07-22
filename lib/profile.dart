@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
         title: const Text(
           'Profile',
           style: TextStyle(
-            fontFamily: 'Roboto',
+            fontFamily: 'Raleway',
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.black,
@@ -36,7 +36,7 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(width: 20),
                 const Text('Adeyemo Kehinde',
                     style: TextStyle(
-                      fontFamily: 'Roboto',
+                      fontFamily: 'Raleway',
                       fontSize: 20,
                     )),
                 const Spacer(),
@@ -54,7 +54,7 @@ class ProfilePage extends StatelessWidget {
             const SizedBox(height: 50),
             const Text('Menu',
                 style: TextStyle(
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Raleway',
                   fontSize: 14,  
                   color: Colors.grey,
                 )),
@@ -89,6 +89,7 @@ class ProfilePage extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'Raleway',
               )),
           const Spacer(),
           const Icon(Icons.arrow_forward_ios_rounded,

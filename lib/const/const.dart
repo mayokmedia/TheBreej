@@ -9,7 +9,7 @@ final kInputDecoration = InputDecoration(
     fontWeight: FontWeight.normal,
   ),
   labelText: "Email",
-  labelStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400),
+  labelStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400, fontFamily: 'Raleway'),
   floatingLabelBehavior: FloatingLabelBehavior.always,
   prefixIcon: Icon(Icons.mail,),
  // suffixIcon: Icon(Icons.remove_red_eye, color: kPrimaryColor,),

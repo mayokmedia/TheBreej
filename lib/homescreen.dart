@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 50,
-                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Raleway',
                 ),
               ),
               const SizedBox(

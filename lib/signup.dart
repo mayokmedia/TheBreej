@@ -19,28 +19,28 @@ class Signup extends StatelessWidget {
               const Text('Sign Up',
               style: TextStyle(
                 fontSize: 18,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,fontFamily: 'Raleway',
               ),),
               const SizedBox(height: 30),
               const TextField(
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey,fontFamily: 'Raleway'),
                 decoration: InputDecoration(
                   labelText: 'User Name',
-                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13),
+                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13,fontFamily: 'Raleway'),
                   hintText: 'user name',
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: TextStyle(color: Colors.grey,fontFamily: 'Raleway'),
                 ),
               ),
 
               SizedBox(height: 30),
               const TextField(
                 obscureText: true,
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey,fontFamily: 'Raleway'),
                 decoration: InputDecoration(
                   labelText: 'PassWord',
-                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13),
+                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13,fontFamily: 'Raleway'),
                   hintText: 'password',
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 20,fontFamily: 'Raleway'),
                     suffixIcon: Icon(Icons.remove_red_eye_rounded, color: Colors.grey,)
                 ),
               ),
@@ -48,12 +48,12 @@ class Signup extends StatelessWidget {
               SizedBox(height: 30),
               const TextField(
                 obscureText: true,
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey,fontFamily: 'Raleway'),
                 decoration: InputDecoration(
                   labelText: 'Confirm PassWord',
-                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13),
+                  labelStyle: TextStyle(color: Colors.grey, fontSize: 13,fontFamily: 'Raleway'),
                   hintText: 'confirm password',
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 20,fontFamily: 'Raleway'),
                 suffixIcon: Icon(Icons.remove_red_eye_rounded, color: Colors.grey,)
                 ),
               ),
@@ -66,7 +66,7 @@ class Signup extends StatelessWidget {
                   height: 60, width: 120,
                   decoration: BoxDecoration(color: Color(0xFFFFA451),
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xFFFFA451),
                         blurRadius: 10.0,
@@ -78,7 +78,7 @@ class Signup extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Sign Up',style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
+                        fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white, fontFamily: 'Raleway'),
                       ),
                     ],
                   ),
