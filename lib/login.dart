@@ -17,87 +17,88 @@ class LoginPage extends StatelessWidget {
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Login',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 26,
-                fontFamily: 'Raleway',
-                color: Colors.black,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: TextField(
-                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                decoration: kInputDecoration,
-              ),
-            ),
-            TextField(
-              obscureText: true,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
-              decoration: kInputDecoration.copyWith(
-                prefixIcon: const Icon(Icons.lock,),
-                suffixIcon: const Icon(Icons.remove_red_eye,),
-                labelText: "Password:",
-                hintText: "Enter password",
-
-              ),
-            ),
-            const Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
-                child: Text('Forgot Password?', style: TextStyle( color: Colors.red, fontFamily: 'Raleway'),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Login',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26,
+                  color: Colors.black,
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push( context, MaterialPageRoute( builder: (context) => const ProfilePage()));
-              },
-              child: Container(
-                height: 60,
-                width: double.infinity,
-                margin: const EdgeInsets.only(bottom: 20),
-                decoration: BoxDecoration(
-                    color: const Color(0xFFFFA451),
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 6.0,
-                      ),
-                    ]),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text('LOGIN', style: TextStyle( color: Colors.white,fontFamily: 'Raleway'),
-                    ),
-                  ],
+              TextField(
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                decoration: kInputDecoration.copyWith(
+                  labelText: "Email:",
+                  hintText: "Enter email",
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                const Text('Dont have an account?', style: TextStyle( color: Colors.grey,fontFamily: 'Raleway'),
+              TextField(
+                obscureText: true,
+                style: const TextStyle(
+                  fontSize: 14,
                 ),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Signup()));
-                  },
-                  child: Text( 'Sign up?', style: const TextStyle( color: Colors.red,fontFamily: 'Raleway'),
+                decoration: kInputDecoration.copyWith(
+                  prefixIcon: const Icon(
+                    Icons.lock,
                   ),
+                  suffixIcon: const Icon(
+                    Icons.remove_red_eye,
+                  ),
+                  labelText: "Password:",
+                  hintText: "Enter password",
                 ),
-              ],
-            )
-          ],
+              ),
+              const Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: kPrimaryColor, fontFamily: 'Raleway'),
+                ),
+              ),
+              Container(
+                  margin: EdgeInsets.only(top: 30),
+                  height: 50,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    child: Text("Login"),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfilePage(),
+                        ),
+                      );
+                    },
+                  )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Dont have an account?',
+                    style: TextStyle(color: Colors.grey, fontFamily: 'Raleway'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Signup()));
+                    },
+                    child: Text(
+                      'Sign up?',
+                      style: const TextStyle(
+                          color: Colors.red, fontFamily: 'Raleway'),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
