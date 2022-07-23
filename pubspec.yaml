@@ -77,11 +77,11 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: asset/font/Roboto-Bold.ttf
+        - asset: asset/font/Roboto-Medium.ttf
 
-    - family: Raleway
-      fonts:
-        - asset: asset/font/Raleway-Heavy.ttf
+    # - family: Raleway
+    #   fonts:
+    #     - asset: asset/font/Raleway-Heavy.ttf
 
   #         weight: 700
   #
