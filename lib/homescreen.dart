@@ -1,3 +1,4 @@
+import 'package:assignment/signup.dart';
 import 'package:assignment/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:assignment/const/styles.dart';
@@ -52,8 +53,7 @@ class HomePage extends StatelessWidget {
                 'Get connected to essential service provider on campus',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.normal,
+                  fontSize: 14,
                 ),
               ),
               const SizedBox(
@@ -95,14 +95,12 @@ class HomePage extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Signup()));
                 },
                 child: Container(
                   height: 50,
-                  width: 300,
+                  width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(20),
@@ -124,15 +122,28 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 35,
               ),
-              RichText(
-                text: const TextSpan(
-                  children: [
-                    TextSpan(text: "Already have an account?"),
-                    TextSpan(
-                        text: " Sign in",
-                        style: TextStyle(decoration: TextDecoration.underline)),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Already have an account?",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginPage()));
+                      },
+                      child: const Text(
+                        " Sign in",
+                        style: TextStyle(
+                          color: Colors.white,
+                          decoration: TextDecoration.underline,
+                        ),
+                      )),
+                ],
               ),
               const SizedBox(
                 width: 5,
@@ -141,5 +152,4 @@ class HomePage extends StatelessWidget {
           ),
         ));
   }
-
 }
