@@ -119,25 +119,19 @@ class Signup extends StatelessWidget {
               //   ),
               // )
 
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProfilePage()));
-                },
-                child: Container(
-                    margin: EdgeInsets.only(top: 30),
-                    height: 50,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      child: Text("Sign up"),
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ProfilePage()));
-                      },
-                    )),
-              )
+              Container(
+                  margin: EdgeInsets.only(top: 30),
+                  height: 50,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    child: Text("Sign up"),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
+                    },
+                  ))
             ],
           ),
         ),
